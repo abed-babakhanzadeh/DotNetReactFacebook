@@ -1,11 +1,11 @@
-﻿import React from 'react';
+﻿import { observer } from 'mobx-react-lite';
 import { Button, Container, Menu } from 'semantic-ui-react';
+import { useStore } from '../stores/store';
 
-interface Props {
-    openForm: () => void;
-}
 
-export default function Navbar({openForm }: Props) {
+function Navbar() {
+    const { activityStore } = useStore();
+    const { selectedActivity, openForm } = activityStore;
     return (
         <Menu inverted fixed='top'>
             <Container>
@@ -15,9 +15,11 @@ export default function Navbar({openForm }: Props) {
                 </Menu.Item>
                 <Menu.Item name='فعالیتهای اخیر' />
                 <Menu.Item>
-                    <Button onClick={openForm} positive content='ایجاد فعالیت'/>
+                    <Button onClick={()=>openForm()} positive content='ایجاد فعالیت'/>
                 </Menu.Item>
             </Container>
         </Menu>
     )
-};
+}
+
+export default observer( Navbar);
