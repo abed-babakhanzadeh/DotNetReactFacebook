@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\app\models\" />
+    <Folder Include="src\app\api\" />
     <Folder Include="src\features\Activities\Dashboard\" />
     <Folder Include="src\features\Activities\Details\" />
     <Folder Include="src\features\Activities\Form\" />

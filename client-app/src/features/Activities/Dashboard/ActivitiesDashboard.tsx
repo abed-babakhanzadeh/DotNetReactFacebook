@@ -15,33 +15,36 @@ interface Props {
     closeForm: () => void;
     createOrEdit: (activity: Activity) => void;
     deleteActivity: (id: string) => void;
+    submitting: boolean;
 }
 
-function ActivitiesDashboard({ activities, selectedActivity, selectActivity, cancelSelectActivity, editMode, openForm, closeForm, createOrEdit, deleteActivity }:Props) {
-  return (
-      <Grid>
-          <Grid.Column width='10'>
-              <ActivitiesList activities={activities}
-                  selectActivity={selectActivity}
-                  deleteActivity={deleteActivity}
-              />
-          </Grid.Column>
-          <Grid.Column width='5'>
-              {selectedActivity && !editMode &&
-                  <ActivityDetails activity={selectedActivity}
-                      cancelSelectActivity={cancelSelectActivity}
-                      openForm={openForm }
-                  />}
+function ActivitiesDashboard({ activities, selectedActivity, selectActivity, cancelSelectActivity, editMode, openForm, closeForm, createOrEdit, deleteActivity, submitting }: Props) {
+    return (
+        <Grid>
+            <Grid.Column width='10'>
+                <ActivitiesList activities={activities}
+                    selectActivity={selectActivity}
+                    deleteActivity={deleteActivity}
+                    submitting={submitting}
+                />
+            </Grid.Column>
+            <Grid.Column width='5'>
+                {selectedActivity && !editMode &&
+                    <ActivityDetails activity={selectedActivity}
+                        cancelSelectActivity={cancelSelectActivity}
+                        openForm={openForm}
+                    />}
 
-              {editMode && 
-                  <ActivityForm closeForm={closeForm}
-                      activity={selectedActivity}
-                  createOrEdit={createOrEdit}
+                {editMode &&
+                    <ActivityForm closeForm={closeForm}
+                        activity={selectedActivity}
+                        createOrEdit={createOrEdit}
+                        submitting={submitting}
 
-                  />}
-          </Grid.Column>
-      </Grid>
-  );
+                    />}
+            </Grid.Column>
+        </Grid>
+    );
 }
 
 export default ActivitiesDashboard;
