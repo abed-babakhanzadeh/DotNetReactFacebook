@@ -15,7 +15,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 1",
-                        Date = PersianCal.PersianNow(),
+                        //Date = PersianCal.PersianNow(),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "نوشیدنی",
                         City = "شیراز",
@@ -24,7 +24,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 2",
-                        Date = PersianCal.AddMonth(-1),
+                        //Date = PersianCal.AddMonth(-1),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "فرهنگی",
                         City = "تبریز",
@@ -33,7 +33,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 3",
-                        Date = PersianCal.AddMonth(1),
+                        //Date = PersianCal.AddMonth(1),
                        Description = "این پست برای تست ایجاد شده است",
                         Category = "موسیقی",
                         City = "اصفهان",
@@ -42,7 +42,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 4",
-                        Date = PersianCal.AddMonth(2),
+                        //Date = PersianCal.AddMonth(2),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "غذا",
                         City = "اصفهان",
@@ -51,7 +51,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 5",
-                        Date = PersianCal.AddMonth(3),
+                        //Date = PersianCal.AddMonth(3),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "نوشیدنی",
                         City = "شیراز",
@@ -60,7 +60,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 6",
-                        Date = PersianCal.AddMonth(4),
+                        //Date = PersianCal.AddMonth(4),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "فرهنگی",
                         City = "شیراز",
@@ -69,7 +69,7 @@ namespace Persistant
                     new Activity
                     {
                        Title = "پست 7",
-                        Date = PersianCal.AddMonth(5),
+                        //Date = PersianCal.AddMonth(5),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "نوشیدنی",
                         City = "شیراز",
@@ -78,7 +78,7 @@ namespace Persistant
                     new Activity
                     {
                        Title = "پست 8",
-                        Date = PersianCal.AddMonth(6),
+                        //Date = PersianCal.AddMonth(6),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "موسیقی",
                         City = "شیراز",
@@ -87,7 +87,7 @@ namespace Persistant
                     new Activity
                     {
                        Title = "پست 9",
-                        Date = PersianCal.AddMonth(7),
+                        //Date = PersianCal.AddMonth(7),
                         Description = "این پست برای تست ایجاد شده است",
                         Category = "سفر",
                         City = "تهران",
@@ -96,7 +96,7 @@ namespace Persistant
                     new Activity
                     {
                         Title = "پست 10",
-                        Date = PersianCal.AddMonth(8),
+                        //Date = PersianCal.AddMonth(8),
                        Description = "این پست برای تست ایجاد شده است",
                         Category = "نوشیدنی",
                         City = "شیراز",

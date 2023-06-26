@@ -16,8 +16,26 @@ const requests = {
 const Activities = {
     list: () => requests.get<Activity[]>('/api/activities/'),
     details: (id: string) => requests.get<Activity>(`/api/activities/${id}`),
-    create: (activity: Activity) => axios.post<void>('/api/activities/', activity),
-    update: (activity: Activity) => axios.put<void>(`/api/activities/${activity.id}`, activity),
+    create: (activity: Activity | {
+        venue: string;
+        MiladiDate: string;
+        city: string;
+        description: string;
+        PersianDate: string;
+        id: string;
+        title: string;
+        category: string
+    }) => axios.post<void>('/api/activities/', activity),
+    update: (activity: Activity | {
+        venue: string;
+        MiladiDate: string;
+        city: string;
+        description: string;
+        PersianDate: string;
+        id: string;
+        title: string;
+        category: string
+    }) => axios.put<void>(`/api/activities/${activity.id}`, activity),
     delet: (id: string) => requests.del<void>(`/api/activities?id=${id}`)
     /*delet: (id: string) => axios.delete<void>(`/api/activities/${id}`)*/
     /*http://localhost:5053/api/Activities?id=%7B1A244604-349F-481B-A1F9-07B74CCE03AE%7D*/

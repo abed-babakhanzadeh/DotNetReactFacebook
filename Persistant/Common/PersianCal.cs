@@ -15,5 +15,11 @@ namespace Persistant.Common
             PersianCalendar cal = new PersianCalendar();
             return cal.GetYear(DateTime.Now).ToString() + "/" + cal.GetMonth(DateTime.Now.AddMonths(month)).ToString() + "/" + cal.GetDayOfMonth(DateTime.Now).ToString();
         }
+
+        public static string ToPersianCal(DateTime miladiDate)
+        {
+            PersianCalendar cal = new PersianCalendar();
+            return cal.GetYear(miladiDate).ToString() + "/" + cal.GetMonth(miladiDate).ToString() + "/" + cal.GetDayOfMonth(miladiDate).ToString();
+        }
     }
 }

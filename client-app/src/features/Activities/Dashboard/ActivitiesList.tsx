@@ -5,7 +5,7 @@ import { useStore } from '../../../app/stores/store';
 
 function ActivitiesList() {
     const { activityStore } = useStore();
-    const {deleteActivity,activities, loading } = activityStore;
+    const {deleteActivity,activitiesByDate, loading, activities } = activityStore;
 
     const [target, setTarget] = useState('');
 
@@ -21,7 +21,7 @@ function ActivitiesList() {
                   <Item key={activity.id}>
                       <Item.Content>
                           <Item.Header as='a'>{activity.title}</Item.Header>
-                          <Item.Meta>{activity.date}</Item.Meta>
+                          <Item.Meta>{activity.PersianDate}</Item.Meta>
                           <Item.Description>
                               <div>
                                   {activity.description }
@@ -50,4 +50,5 @@ function ActivitiesList() {
   );
 }
 
-export default observer( ActivitiesList);
+export default observer(ActivitiesList) ;
+// export default ActivitiesList;

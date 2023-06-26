@@ -1,6 +1,5 @@
 ﻿using Application.Activities;
 using Domain;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -35,6 +34,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateActivity([FromBody]Activity activity)
         {
+            activity.MiladyDate = DateTime.Now;
             return Ok(await Mediator.Send(new Create.Command { Activity = activity }));
         }
 

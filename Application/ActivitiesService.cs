@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using System.Runtime.InteropServices.JavaScript;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 using Persistant.Common;
 using Persistant.Interface;
@@ -38,7 +39,8 @@ namespace Application
                     Category = "گردشگری",
                     City="اصفهان",
                     Description="این پست برای تست ایجاد شده است",
-                    Date=PersianCal.PersianNow(),
+                    MiladyDate = DateTime.Now,
+                    PersianDate= PersianCal.PersianNow(),
                     Title="پست 3",
                     Venue="کوه صحفه"
                 },
@@ -48,7 +50,8 @@ namespace Application
                     Category = "مذهبی",
                     City="قم",
                     Description="این پست برای تست ایجاد شده است",
-                    Date=PersianCal.PersianNow(),
+                    MiladyDate = DateTime.Now,
+                    PersianDate= PersianCal.PersianNow(),
                     Title="پست 4",
                     Venue="حرم حضرت معصومه"
                 }

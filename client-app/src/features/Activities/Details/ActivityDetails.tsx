@@ -14,7 +14,7 @@ function ActivityDetails() {
           <Card.Content>
               <Card.Header>{activity.title }</Card.Header>
               <Card.Meta>
-                  <span >{activity.date }</span>
+                  <span >{activity.PersianDate }</span>
               </Card.Meta>
               <Card.Description>
                   {activity.description }
