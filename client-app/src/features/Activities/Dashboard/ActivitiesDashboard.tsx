@@ -9,10 +9,10 @@ import LoadingComponent from "../../../app/layout/LoadingComponent";
 
 function ActivitiesDashboard() {
     const { activityStore } = useStore();
-    const { selectedActivity, editMode } = activityStore
+    const { loadActivities, activityRegistery } = activityStore
     useEffect(() => {
-        activityStore.loadActivities();
-    }, [activityStore])
+        if (activityRegistery.size <= 1) loadActivities();
+    }, [activityRegistery.size, loadActivities])
 
     if(activityStore.loadingInitial) return<LoadingComponent content='در حال بارگذاری ...'/>
     
@@ -23,14 +23,16 @@ function ActivitiesDashboard() {
             <Grid.Column width='10'>
                 <ActivitiesList />
             </Grid.Column>
-
+                <h2>فیلترینگ</h2>
             <Grid.Column width='5'>
-                {selectedActivity && !editMode && <ActivityDetails />}
-                {editMode && <ActivityForm />}
+
+
+
             </Grid.Column>
 
         </Grid>
     );
 }
-
+//{ selectedActivity && !editMode && <ActivityDetails /> }
+//{ editMode && <ActivityForm /> }
 export default observer( ActivitiesDashboard);
